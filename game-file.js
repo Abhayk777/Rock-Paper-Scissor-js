@@ -35,29 +35,29 @@ const playRound = () => {
         score = null
     }
     else if(m === "rock" && n === "paper"){
-        alert(`Human point,${m} beats ${n}`)
+        alert(`Computer choose--${m}    Human's point`)
         score = 0  
                     
     }
     else if(m === "rock" && n === "scissor"){
-        alert(`Computer point,${n} beats ${m}`)
+        alert(`Computer choose--${m}    Computer's point`)
         score = 1
     }
     else if(m === "scissor" && n === "paper"){
-        alert(`Computer point,${m} beats ${n}`)
+        alert(`Computer choose--${m}    Computer's point`)
         score = 0        
     }
     else if(m === "scissor" && n === "rock"){
-        alert(`Human point,${n} beats ${m}`)
+        alert(`Computer choose--${m}    Human's point`)
         score = 1
         
     }
     else if(m === "paper" && n === "rock"){
-        alert(`Computer point,${m} beats ${n}`)
+        alert(`Computer choose--${m}    Computer's point`)
         score = 0        
     }
     else if(m === "paper" && n === "scissor"){
-        alert(`Human point,${n} beats ${m}`)
+        alert(`Computer choose--${m}    Human's point`)
         score = 1        
     }
     else{
@@ -69,10 +69,10 @@ const playRound = () => {
 
 const playGame = () => {
     let num = Number(prompt("Enter number of rounds:"));
-    if(num === null || num === 0 ){
+    if(num === null || num <= 0 ){
         alert("Dont't waste my time if you dont wanna play")
     }
-    else{
+    else if (num > 0 && num <100){
         humanPoints = 0
         computerPoints = 0
         for(let i = 0; i < num; i++){ 
@@ -103,6 +103,12 @@ const playGame = () => {
             console.log("Draw")
             console.log(`Don't ask me the points stupid noob. Don't you know basic maths`)
         }
+    }
+    else if(num > 100){
+        alert("Nigga get some life and don't enter this page again")
+    }
+    else{
+        alert("Man are you stupid. Do you what NUMBER OF ROUNDS mean ")
     }
 }
 playGame()
