@@ -109,6 +109,7 @@ const playGame = () => {
     }
     else{
         alert("Man are you stupid. Do you what NUMBER OF ROUNDS mean ")
+        playGame()
     }
 }
 playGame()
